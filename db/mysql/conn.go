@@ -1,7 +1,6 @@
 package mysql
 
 import (
-	"cloudstore/config"
 	"database/sql"
 	"fmt"
 	"os"
