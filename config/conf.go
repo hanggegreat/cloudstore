@@ -1,30 +1,26 @@
-## ReadMe
-想要启动这个Demo，首先要配置自己的以下信息。请照着 [doc目录](../doc/)进行运维部署
-
-```
 package config
 
 // HOST主机信息
-const (
-	HOST = 你的IP地址
+var (
+	HOST = "127.0.0.1"
 )
 
 // MySQL
-const (
+var (
 	// MysqlLink : mysql 路由
-	MysqlLink = "mysql账号:mysql密码@tcp(" + HOST + ":mysql端口)/icloud?charset=utf8"
+	MysqlLink = "root:root@tcp(" + HOST + ":3306)/icloud?charset=utf8"
 )
 
 // Redis
-const (
+var (
 	// RedisHost : redis 路由
-	RedisHost = HOST + ":" + Redis端口
+	RedisHost = HOST + ":" + "6379"
 	// RedisPass : redis auth
-	RedisPass = Redis密码
+	RedisPass = ""
 )
 
 // Ceph
-const (
+var (
 	// CephAccessKey : 访问Key
 	CephAccessKey = ""
 	// CephSecretKey : 访问密钥
@@ -34,7 +30,7 @@ const (
 )
 
 // kodo
-const (
+var (
 	// KodoBucket : bucket桶
 	KodoBucket = ""
 	// KodoEndpoint : kodo endpoint
@@ -48,7 +44,7 @@ const (
 )
 
 // RabbitMQ
-const (
+var (
 	// AsyncTransferEnable ： 异步上传文件
 	AsyncTransferEnable = true
 	// TransExchangeName : 用于文件transfer的交换机
@@ -64,10 +60,9 @@ const (
 )
 
 // pwdSalt
-const (
-    // pwdSalt : 秘钥Salt
-	pwdSalt   = ""
-    // tokenSalt : TokenSalt
+var (
+	// pwdSalt : 秘钥Salt
+	pwdSalt = ""
+	// tokenSalt : TokenSalt
 	tokenSalt = "_tokenSalt"
 )
-```

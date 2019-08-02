@@ -1,6 +1,6 @@
 # 基于golang实现的一种简易分布式云存储服务
 
-linux默认存储路径`/data/tmp/`
+linux默认存储路径 `/data/tmp/`
 
 启动服务
 ```shell 
